@@ -1,17 +1,104 @@
 {% extends 'base.html' %}
 {% block content %}
-        <div class="container">
-            <div class="card m-3", style="background-color:#EAF2F8">
+    <style>
+        * {
+        box-sizing: border-box;
+        }
+
+        body {
+        font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Float four columns side by side */
+        .column {
+        float: left;
+        width: 30%;
+        padding: 15px;
+        }
+
+        /* Remove extra left and right margins, due to padding */
+        .row {margin: 30px;}
+
+        /* Clear floats after the columns */
+        .row:after {
+        content: "";
+        display: table;
+        clear: both;
+        }
+
+        /* Responsive columns */
+        @media screen and (max-width: 600px) {
+        .column {
+            width: 50%;
+            display: block;
+            margin-bottom: 20px;
+        }
+        }
+
+        /* Style the counter cards */
+        .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        text-align: left;
+        background-color: #EAF2F8;
+        }
+    </style>
+
+    <div class="container">
+        <br>
+        <h2 class="card-title">
+            Hello there!
+        </h2>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <div class="card">
                 <div class="card-body", style="background-color:#EAF2F8">
-                    <h2 class="card-title", style="background-color:#EAF2F8">
-                        Hello there!
-                    </h2>
-                    <p class="card-text">
-                        This is a simple app where users can write blogs and translate blogs from English to Chinese.
-                        I am Amelia, currently pursuing a Master of Internet Technology. This is my personal project :)
+                    <h3 class="card-title">
+                        Introduction
+                    </h3>
+                    <p class="card-text", style="background-color:#EAF2F8">
+                        This is a simple Django app where users can write blogs and translate blogs from English to Mandarin.<br>
+                        <br>I am Amelia Wu, currently pursuing a Master of Information Technology with a major in artificial intelligence
+                         at the University of Melbourne. This is my personal project :)
                     </p>
-                </div>     
-            </div> 
+                </div> 
+            </div>
         </div>
+        <div class="column">
+            <div class="card">
+                <div class="card-body", style="background-color:#EAF2F8">
+                    <h3 class="card-title">
+                        Blog Content
+                    </h3>
+                    <p class="card-text", style="background-color:#EAF2F8">
+                        The blogs I posted are all about the books written by Albert Camus, who is a French philosopher and author. He was awarded the 1957 Nobel Prize in Literature at the age of 44. One of my favourite 
+                        books is The Stranger, whose theme and outlook are cited as examples of Camus' philosophy, absurdism, coupled with existentialism.
+                    </p>
+                </div> 
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <div class="card-body", style="background-color:#EAF2F8">
+                    <h3 class="card-title">
+                        Contact
+                    </h3>
+                    <p class="card-text", style="background-color:#EAF2F8">
+                        <br>
+                        <p>Feel free to contact me!</p>
+                        <br>
+                        <p>Click the button below and send me an email :)</p>
+                        <br>
+                        <button onclick="location.href='mailto: wxysh@outlook.com'" type="button">
+                            Email</button>
+                        <br>
+                        <br>
+                    </p>
+                </div> 
+            </div>
+        </div>
+    </div>
         
 {% endblock content %}
